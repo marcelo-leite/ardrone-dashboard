@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+*{
+  margin: 0; 
+  padding: 0; 
+  outline: 0; 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+  border: none;
+  list-style-type: none;
+  list-style: none;
+  font-family: 'Quicksand', sans-serif;
+  
+}
+
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/*CSS FLEX BOX CLASS*/
+
+.f-col{
+  display: flex;
+  flex-direction: column;
+}
+.f-row{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.f-c{
+  justify-content: center;
+  align-items: center;
+}
+
+.f-ac{
+  align-items: center;
+}
+
+.f-as{
+  align-items: flex-start;
+}
+.f-ae{
+  align-items: flex-end;
+}
+
+.f-jc{
+  justify-content: center;
+}
+
+.f-jsb{
+  justify-content: space-between;
+}
+.f-jsa{
+  justify-content: space-around;
+}
+.f-js{
+  justify-content: flex-start;
+}
+.f-je{
+  justify-content: flex-end;
+}
+
+/* Barra de rolagem */
+::-webkit-scrollbar {
+  width: 6px;
+  background:none;
+  }
+::-webkit-scrollbar-thumb {
+      background: var(--gray-100);
+      border-radius: 100px;
+  }
+
+::-webkit-scrollbar-button {
+      background:none;
+      height: 0.5rem;
+  }
+
+  :root{
+    --menu-hover: rgb(51 51 51 / 1%);
+    --black-transparent-50:#4f4f4f2e;
+    --white:#FFFFFF;
+    --gray-transparent-50: #0000000d ;
+
+    
+    --gray-50:#FAFBFD;
+    --gray-100:#E6E8ED;
+    --gray-300:#AFB2B1;
+    --gray-500:#8B8C8E;
+    --gray-600:#696969;
+    --gray-800:#4F4F4F;
+
+
+    --green-800:#04E299;
+
+    --blue-50:#F5F9FF;
+    --blue-100:#DAE8F3;
+    --blue-300:#9CC3EE;
+    --blue-800:#018BEE;
+
+    --orange-500:#FFB560;
+    --purple-500:#8749FF;
+    --red-500:#F73C71;
+    --blue-500:#0694FA;
+    
+   
+
+  }
+  
+
+  /*======= Map Styling ============*/
+.gmnoprint a, .gmnoprint span {
+  color: white;
+  display: none !important;
+  
+}
+.gmnoprint div {
+  background:none !important;
+  
+}
+#GMapsID div div a div img{
+  display:none;
+  display: none !important;
+  
+}
+
+.gm-style-cc{
+  display: none;
+}
