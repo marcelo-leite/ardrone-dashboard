@@ -118,7 +118,11 @@ export const GeralStyle = styled.div`
                 }
 
                 .box-speed{
-                    width: 300px;
+                    width: 270px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 0;
 
                 }
 
