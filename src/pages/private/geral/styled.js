@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const GeralStyle = styled.div`
+export const GeralStyled = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     flex-grow: 1;
     display: flex;
@@ -10,7 +10,7 @@ export const GeralStyle = styled.div`
 
     .dash-board{
         width: 100%;
-        height: calc(100vh - 65px);
+        height: 100vh;
         padding: 40px;
         padding-top: 0;
         color: white;
@@ -74,6 +74,8 @@ export const GeralStyle = styled.div`
             .box-data{
                 display: flex;
                 flex-grow: 1;
+                width: 70%;
+                max-width: 70%;
             }
             .box-data-1{
 
@@ -123,6 +125,7 @@ export const GeralStyle = styled.div`
                     justify-content: center;
                     align-items: center;
                     padding-bottom: 0;
+                    
 
                 }
 
@@ -130,15 +133,21 @@ export const GeralStyle = styled.div`
             
             .box-pwm{
                 position: relative;
-                flex-grow: 1;
-                height: 120px;
-                max-width: 100%;
                 display: flex;
+                flex-grow: 1;
+                height: 200px;
+                
+                .box-item{
+                    font-size: 14px;
+                    flex-grow: 1;
+                    margin: 10px;
+                    margin-top: 0px;
+                }
                 
             }
 
             .box-maps{
-                width: 320px;
+                width: 30%;
                 padding: 0;
                 position: relative;
                 .map-button{

@@ -26,9 +26,10 @@ function sizeNumber(size){
   return size*6;
 }
 
-const ReviewsBar = (props) => {
+const ReviewsBar = ({score, unit}) => {
 
-  const { score } = props;
+  // const { score } = props;
+  // const { unit } = props;
 
 
 
@@ -63,11 +64,11 @@ const ReviewsBar = (props) => {
             strokeWidth={6}
           >
               <div className="f-col f-c" >
-                  <div className="f-row f-c" style={{position: "relative",fontSize: "40px"}}>
-                      <strong  style={{fontSize: "3rem", fontFamily: '"Open Sans", Arial', fontWeight: 200}}>{score} </strong>
-                      <span style={{fontSize: "1.5rem",fontFamily: '"Open Sans", Arial' , color: "rgb(166, 162, 188)", fontWeight: 200, padding: 5}}>KM/H</span>
+                  <div className="f-row f-c">
+                      <strong  style={{fontSize: "3em", fontFamily: '"Open Sans", Arial', fontWeight: 200}}>{score} </strong>
+                      <span style={{fontSize: "1.5em",fontFamily: '"Open Sans", Arial' , color: "rgb(166, 162, 188)", fontWeight: 200, padding: 5}}>{unit}</span>
                   </div>
-                  <span style={{fontSize:  "0.8rem",fontFamily: '"Open Sans", Arial',marginTop: 15,color: "rgb(166, 162, 188)", fontWeight: 200}}>SPEED</span>              
+                  <span style={{fontSize:  "0.8em",fontFamily: '"Open Sans", Arial',marginTop: 15,color: "rgb(166, 162, 188)", fontWeight: 200}}>SPEED</span>              
               </div>
           
           </CircularProgressbarWithChildren>

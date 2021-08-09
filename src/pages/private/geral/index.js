@@ -1,29 +1,29 @@
 import React, { Component} from "react";
 import { FaLink, FaThermometerThreeQuarters } from "react-icons/fa";
 import {WiBarometer} from "react-icons/wi"
-import Header from "../../components/header/index.js";
-import NavbarLeft from "../../components/navbar-left/index.js";
+import Header from "../../../components/header/index.js";
+import NavbarLeft from "../../../components/navbar-left/index.js";
 
-import ReviewsBar from '../../components/circular-progress-bar/index.js';
-import BaterryMeter from "../../components/progress-meter/index.js";
+
+
+// Graphs
+import ReviewsBar from '../../../components/circular-progress-bar/index.js';
+import BaterryMeter from "../../../components/progress-meter/index.js";
 
 // MAPS API
-import MapBox from "../../components/map-container/google/MapContainer.js";
-// import MapBox from "../../components/map-container/bing/MapContainer.js";
-// import MapBox from "../../components/map-container/open-street-map/MapContainer";
+import MapBox from "../../../components/map-container/google/MapContainer.js";
+// import MapBox from "../../../components/map-container/bing/MapContainer.js";
+// import MapBox from "../../../components/map-container/open-street-map/MapContainer";
 
 
 
 
-import { GeralStyle } from "./styled";
+import { GeralStyled } from "./styled";
 
 class Geral extends Component{
     render(){
       return(
-        <div className="wrapper f-col">
-            <Header/>
-            <NavbarLeft/>
-            <GeralStyle>
+        <GeralStyled>
                 <div className="dash-board">
                     <div className="dash-info">
                         <div className="dash-title">Ardrone Dash Board </div>
@@ -67,7 +67,7 @@ class Geral extends Component{
                                             </div>
                                             <div className="sensor-value">
                                                     <div>
-                                                        2,589
+                                                        {this.props.altitude.toFixed(2)}
                                                     </div>
                                                     
                                                     <span className="sensor-unit">
@@ -95,16 +95,23 @@ class Geral extends Component{
                                 </div>
                                 
                                 <div className="box-speed  box-s">
-                                    <ReviewsBar score="60" />
+                                    <ReviewsBar score="60" unit="KM/H"/>
 
                                 </div>
                             </div>
                             <div className="box-pwm  box-s">
-                                {/* <ReviewsBar style={{width: "100%",height: "100%" }}score="40" /> */}
-                                {/* <ReviewsBar score="60" />
-                                <ReviewsBar score="60" />
-                                <ReviewsBar score="60" /> */}
-
+                                <div className="box-item">
+                                    <ReviewsBar score="40" unit="RPM"/>
+                                </div>
+                                <div className="box-item">
+                                    <ReviewsBar score="60" unit="RPM" />
+                                </div>
+                                <div className="box-item">
+                                    <ReviewsBar score="23" unit="RPM"/>
+                                </div>
+                                <div className="box-item">
+                                    <ReviewsBar score={this.props.altitude.toFixed(1)*10} unit="RPM"/>
+                                </div>
                             </div>
                         </div>
 
@@ -133,8 +140,8 @@ class Geral extends Component{
                 
         
 
-            </GeralStyle>
-        </div>
+            </GeralStyled>
+       
 
         
         
