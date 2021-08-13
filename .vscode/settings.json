@@ -1,6 +1,0 @@
-{
-    "license.extension": ".md",
-    "files.exclude": {
-        "**/.git": false
-    }
-}
