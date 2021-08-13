@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { RosLoginStyled } from "./styled";
+import { RosLoginStyled } from "./styled.jsx";
 
 
 class RosLogin extends Component {
@@ -15,7 +15,7 @@ class RosLogin extends Component {
        
         <div className="input-append">
           <input type="text" placeholder="Type ROSBridge URL" value={this.props.url} onChange={this.props.changeUrl}/>
-          <button className="btn-connect" onClick={this.props.ROSConnect}>Connetar</button>
+          <button className="btn-connect" onClick={this.props.ROSConnect}>Conectar</button>
         </div>
       </RosLoginStyled>
     );

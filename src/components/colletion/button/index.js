@@ -1,6 +1,6 @@
 
 import React, { Component} from "react";
-import { HeaderStyle } from "./styled";
+import { Button, ButtonGreen } from "./styled";
 
 
 class Button extends Component{

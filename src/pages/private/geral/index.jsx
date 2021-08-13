@@ -100,7 +100,7 @@ class Geral extends Component{
                                 </div>
                             </div>
                             <div className="box-pwm  box-s">
-                                <div className="box-item">
+                                {/* <div className="box-item">
                                     <ReviewsBar score="40" unit="RPM"/>
                                 </div>
                                 <div className="box-item">
@@ -111,7 +111,7 @@ class Geral extends Component{
                                 </div>
                                 <div className="box-item">
                                     <ReviewsBar score={this.props.altitude.toFixed(1)*10} unit="RPM"/>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

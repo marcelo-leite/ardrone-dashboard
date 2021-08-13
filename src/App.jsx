@@ -5,6 +5,7 @@ import ROSLIB from 'roslib';
 
 // FRONT END
 import Geral from "./pages/private/geral/index"
+import Header from "./components/header";
 import NavbarLeft from "./components/navbar-left";
 import RosLogin from "./pages/public/login/index"
 
@@ -77,7 +78,7 @@ class App extends Component{
     if(this.state.connected){
       return(
         <div className="wrapper f-col">
-          
+            <Header/>
             <NavbarLeft/>
             <Geral altitude={this.state.y}/>
         </div> 
@@ -85,8 +86,8 @@ class App extends Component{
     }else{
       return(
         <div className="wrapper">
-            <RosLogin url={this.state.url} changeUrl={this.changeUrl} ROSConnect={this.ROSConnect}/>
-          </div> 
+          <RosLogin url={this.state.url} changeUrl={this.changeUrl} ROSConnect={this.ROSConnect}/>
+        </div> 
       );
     }    
       
