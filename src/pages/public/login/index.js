@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Copyright 2021 marcelo
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,6 +13,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+=======
+>>>>>>> b4308357d20342a354dce38e766ca482d8a3c77c
 import React, {Component} from "react";
 import { RosLoginStyled } from "./styled.jsx";
 
