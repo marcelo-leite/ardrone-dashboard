@@ -5,9 +5,10 @@ import BaterryMeterStyle from "./styled.js";
 
 
 
-const BaterryMeter = () => {
-    let percent = 70
+const BaterryMeter = (props) => {
+    let percent = props.percent;
     return( 
+       
         <BaterryMeterStyle>
             <div className="level-shape">
                 <div className="level-fill" style={{width: percent + "%"}}></div>

@@ -10,6 +10,9 @@ import NavbarLeft from "../../../components/navbar-left/index.js";
 // Graphs
 import ReviewsBar from '../../../components/circular-progress-bar/index.js';
 import BaterryMeter from "../../../components/progress-meter/index.js";
+import ChartContainer from "../../../components/chart-container/index.js";
+// import Chart from "react-apexcharts";
+
 
 // MAPS API
 import MapBox from "../../../components/map-container/google/MapContainer.js";
@@ -20,8 +23,19 @@ import MapBox from "../../../components/map-container/google/MapContainer.js";
 
 
 import { GeralStyled } from "./styled";
+import { Color } from "@antv/attr";
 
-class Geral extends Component{
+class Geral extends React.Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            series: []
+            
+        };
+    }
+
+    
     render(){
       return(
         <GeralStyled>
@@ -43,7 +57,7 @@ class Geral extends Component{
                                         <div className="box-title">
                                             NIVEL BATERIA
                                         </div>
-                                        <BaterryMeter></BaterryMeter>
+                                        <BaterryMeter percent={this.props.baterry.toFixed(0)}></BaterryMeter>
                                     </div>
 
                                     <div className="sensor-list box-row">
@@ -53,7 +67,7 @@ class Geral extends Component{
                                             </div>
                                             <div className="sensor-value">
                                                     <div>
-                                                        97896
+                                                        {this.props.pressure}
                                                     </div>
                                                     
                                                     <span className="sensor-unit">
@@ -62,7 +76,7 @@ class Geral extends Component{
                                             </div>
                                         </div>
 
-                                        <div className="box-altitude box-s" style={{flexGrow:2}}>
+                                        <div className="box-altitude box-s" style={{flexGrow:1}}>
                                             <div className="box-title">
                                                 ALTITUDE
                                             </div>
@@ -77,7 +91,7 @@ class Geral extends Component{
                                             </div>
                                         </div>
 
-                                        <div className="box-gyro  box-s" style={{flexGrow:3}}>
+                                        <div className="box-gyro  box-s" style={{flexGrow:1}}>
                                             <div className="box-title">
                                                 ORIENTAÇÃO
                                             </div>
@@ -134,13 +148,28 @@ class Geral extends Component{
                         
 
                     </div>
+
+                    {/* <div className="dash-data">
+                        <div className="box-acess box-s">
+                            <div className="box-title">
+                                ACELEROMETRO
+                            </div>
+                            <div className="box-chart">
+                                <ChartContainer serie={this.props.serie_accs}>
+
+                                </ChartContainer>
+                                
+                            </div>
+                            <div className="box-chart">
+                                <ChartContainer serie={this.props.serie_accs}>
+
+                                </ChartContainer>
+                                
+                            </div>
+                        </div> 
+                    </div> */}
+                
                 </div>
-
-
-                
-                
-        
-
             </GeralStyled>
        
 

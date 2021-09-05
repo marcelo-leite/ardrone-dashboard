@@ -1,0 +1,67 @@
+altd: 39
+​
+ax: -0.055409420281648636
+​
+ay: 0.000028144231691840105
+​
+az: 1.0405081510543823
+​
+batteryPercent: 100
+​
+header: Object { stamp: {…}, frame_id: "ardrone_base_link", seq: 4396 }
+​
+magX: 0
+​
+magY: 0
+​
+magZ: 0
+​
+motor1: 0
+​
+motor2: 0
+​
+motor3: 0
+​
+motor4: 0
+​
+pressure: 0
+​
+rotX: 1.6813596487045288
+​
+rotY: 1.5152816772460938
+​
+rotZ: 0.02333838678896427
+​
+state: 2
+​
+tags_count: 0
+​
+tags_distance: Array []
+​
+tags_height: Array []
+​
+tags_orientation: Array []
+​
+tags_type: Array []
+​
+tags_width: Array []
+​
+tags_xc: Array []
+​
+tags_yc: Array []
+​
+temp: 0
+​
+tm: 681960000
+​
+vx: -1.5821237564086914
+​
+vy: 0.000865442561917007
+​
+vz: 3.9549977779388428
+​
+wind_angle: 0
+​
+wind_comp_angle: 0
+​
+wind_speed: 0

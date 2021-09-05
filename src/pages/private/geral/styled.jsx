@@ -10,10 +10,10 @@ export const GeralStyled = styled.div`
 
     .dash-board{
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
         padding: 40px;
         padding-top: 0;
-        color: white;
+        color: #ffffff;
         display: flex;
         flex-direction: column;
 
@@ -200,7 +200,26 @@ export const GeralStyled = styled.div`
     }
     
     
-    
+    /* DASH DATA 2 */
+
+    .dash-data{
+        .box-acess{
+            width: 69%;
+            /* height: 300px; */
+            display: flex;
+            flex-direction: column;
+            .box-chart{
+                position: relative;
+                /* color: #0000000ff; */
+                
+                width: 100%;
+                height: 100px;
+                max-height: 100px;
+            }
+           
+            
+        }
+    }
 
     
 
