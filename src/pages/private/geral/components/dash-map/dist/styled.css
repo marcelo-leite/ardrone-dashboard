@@ -1,0 +1,17 @@
+.gps-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-top: 60px;
+  font-family: "Roboto";
+}
+.gps-info .info-item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.gps-info .info-item span {
+  font-weight: 700;
+  font-size: 30px;
+}

@@ -10,7 +10,7 @@ export const GeralStyled = styled.div`
 
     .dash-board{
         width: 100%;
-        /* height: 100vh; */
+        height: 100vh;
         padding: 40px;
         padding-top: 0;
         color: #ffffff;
@@ -90,11 +90,15 @@ export const GeralStyled = styled.div`
                         
                         display: flex;
                         flex-direction: column;
-                        flex-grow: 1;
+                        /* flex-grow: 1; */
+                        width: calc(100%/3);
+                        max-width:  calc(100%/3);
+                      
                         .sensor-value{
                             display: flex;
                             flex-direction: row;
                             flex-grow: 1;
+                            
                             justify-content: center;
                             align-items: center;
                             
@@ -134,15 +138,28 @@ export const GeralStyled = styled.div`
             .box-pwm{
                 position: relative;
                 display: flex;
+                flex-direction: column;
                 flex-grow: 1;
-                height: 200px;
                 
-                .box-item{
-                    font-size: 14px;
+                height: 210px;
+                .rmp-value{
+                    display: flex;
                     flex-grow: 1;
-                    margin: 10px;
-                    margin-top: 0px;
+                    position: relative;
+                    height: 100%;
+                    margin-top: 10px;
+                    
+                    .box-item{
+                        
+                        font-size: 14px;
+                        width: calc(100%/4);
+                        margin: 10px;
+                        
+                        margin-top: 0px;
+                    }
+
                 }
+                
                 
             }
 

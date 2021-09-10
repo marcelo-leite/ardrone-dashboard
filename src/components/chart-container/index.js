@@ -1,13 +1,14 @@
 
 import { Color } from "@antv/attr";
-import React, { Component} from "react";
+import React, { Component, useRef} from "react";
 import { Line, defaults } from 'react-chartjs-2';
 
 
 const ChartContainer = (props) => {
+    const ref = useRef();
 
     const data = {
-        labels: [0,1,2,3,4,5,6,7],
+        labels: Array.from(Array(props.serie.ax.length).keys()),
         datasets: [
           {
             label: 'Ax',
@@ -73,7 +74,7 @@ const ChartContainer = (props) => {
     defaults.datasets.line.pointRadius = 0;
 
     return(
-        <Line data={data} options={options} height="100%"/>
+        <Line data={data} options={options} ref={ref} height="100%"/>
 
     );
    

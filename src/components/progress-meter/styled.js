@@ -29,6 +29,9 @@ const BaterryMeterStyle = styled.div`
     } 
     .label-percent{
         font-size: 16px;
+        width: 40px;
+        
+        max-width: 40px;
         font-weight: 500;
 
     }  

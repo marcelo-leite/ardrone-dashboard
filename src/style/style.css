@@ -4,6 +4,13 @@
     height: 100%;
 
 }
+
+a{
+    outline: none;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+}
 .wrapper{
     display: flex;
     width: 100%;

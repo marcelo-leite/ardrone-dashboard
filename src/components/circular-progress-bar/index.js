@@ -26,7 +26,7 @@ function sizeNumber(size){
   return size*6;
 }
 
-const ReviewsBar = ({score, unit}) => {
+const ReviewsBar = ({score, unit, color, label}) => {
 
   // const { score } = props;
   // const { unit } = props;
@@ -52,8 +52,9 @@ const ReviewsBar = ({score, unit}) => {
               //   strokeLinecap: 'butt',
                 transform: 'rotate(-126deg)',
                 transformOrigin: 'center center',
-                stroke: "#fff",
+                stroke: `${color}`,
               },
+              
               text: {
                 display: "none",
                 fill: '#fff',
@@ -68,7 +69,7 @@ const ReviewsBar = ({score, unit}) => {
                       <strong  style={{fontSize: "3em", fontFamily: '"Open Sans", Arial', fontWeight: 200}}>{score} </strong>
                       <span style={{fontSize: "1.5em",fontFamily: '"Open Sans", Arial' , color: "rgb(166, 162, 188)", fontWeight: 200, padding: 5}}>{unit}</span>
                   </div>
-                  <span style={{fontSize:  "0.8em",fontFamily: '"Open Sans", Arial',marginTop: 15,color: "rgb(166, 162, 188)", fontWeight: 200}}>SPEED</span>              
+                  <span style={{fontSize:  "0.8em",fontFamily: '"Open Sans", Arial',marginTop: 15,color: "rgb(166, 162, 188)", fontWeight: 200}}>{label}</span>              
               </div>
           
           </CircularProgressbarWithChildren>

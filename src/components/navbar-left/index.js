@@ -2,6 +2,7 @@
 import React, { Component} from "react";
 import {FaTv, FaMapMarkedAlt, FaLocationArrow, FaVideo, FaCog} from 'react-icons/fa';
 import { NavbarLeftStyle } from "./styled";
+import { Link } from "react-router-dom";
 
 const iconsize = "1.2rem";
 class NavbarLeft extends Component{
@@ -10,34 +11,34 @@ class NavbarLeft extends Component{
             <NavbarLeftStyle>
                 <ul className="navbar-list">
                     <li className="navbar-item">
-                        <button className="navbar-link">
+                        <Link to="/geral" className="navbar-link">
                             <FaTv size={iconsize}/>
-                        </button>
+                        </Link>
                     </li>
                     
-                    <li className="navbar-item">
-                        <button className="navbar-link">
+                    {/* <li className="navbar-item">
+                        <Link className="navbar-link">
                             <FaMapMarkedAlt size={iconsize}/>
-                        </button>
-                    </li>
+                        </Link>
+                    </li> */}
                     
-                    <li className="navbar-item">
-                        <button className="navbar-link">
+                    {/* <li className="navbar-item">
+                        <Link className="navbar-link">
                             <FaLocationArrow size={iconsize}/>
-                        </button>
+                        </Link>
                     </li>
 
                     <li className="navbar-item">
-                        <button className="navbar-link">
+                        <Link className="navbar-link">
                             <FaVideo size={iconsize}/>
-                        </button>
+                        </Link>
                     </li>
 
                     <li className="navbar-item">
-                        <button className="navbar-link">
+                        <Link className="navbar-link">
                             <FaCog size={iconsize}/>
-                        </button>
-                    </li>
+                        </Link>
+                    </li> */}
                     
                 </ul>
             </NavbarLeftStyle>

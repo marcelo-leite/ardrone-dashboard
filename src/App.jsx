@@ -1,5 +1,7 @@
 
 import React, { Component} from "react";
+import { Route, BrowserRouter, Redirect} from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { BrowserRouter, Switch, Route, Link} from 'react-router-dom'
 
 import ROSLIB from 'roslib';
@@ -17,32 +19,39 @@ class App extends Component{
   constructor() {
     super();
     this.state = {
-      url: 'ws://192.168.0.110:9090',
+      url: 'ws://localhost:9090',
       connected: false,
       error: false,
-      magX: 0,
-      magY: 0,
-      magZ: 0,
-      baterry: 0,
-      pressure: 0,
-      rotX: 0,
-      rotY: 0,
-      rotZ: 0,
-      vx: 0,
-      vy: 0,
-      vz: 0,
-      altitude: 0,
-      ax: 0,
-      ay: 0,
-      az: 0,
-      motor1: 0, 
-      motor2: 0, 
-      motor3: 0, 
-      motor4: 0,
+      navdata:{
+        magX: 0,
+        magY: 0,
+        magZ: 0,
+        battery: 25,
+        pressure: 9668,
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+        vx: 0,
+        vy: 0,
+        vz: 0,
+        altitude: 4,
+        ax: 0,
+        ay: 0,
+        az: 0,
+        motor1: 0, 
+        motor2: 0, 
+        motor3: 0, 
+        motor4: 0
+      },
+      gps:{
+        lat: -5.449284,
+        lng: -47.402785,
+        alt: 140
+      },
       serie_accs: {
-        ax: [0,0,0,0,0,0,0,0],
-        ay: [0,0,0,0,0,0,0,0],
-        az: [0,0,0,0,0,0,0,0]
+        ax: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        ay: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        az: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
       }
     }
     
@@ -89,32 +98,96 @@ class App extends Component{
     
     // ROS SUBSCRIBE 
     this.navdata.subscribe((message) => {
-      if(this.state.altitude !== message.altd) this.setState({altitude: message.altd});
-      if(this.state.pressure !== message.pressure) this.setState({pressure: message.pressure});
-      if(this.state.altitude !== message.batteryPercent) this.setState({baterry: message.batteryPercent});
-      if(this.state.ax !== message.ax){
-          this.setState({ax: message.ax});
-          this.setState({ay: message.ay});
-          this.setState({az: message.az});
-          let aux = this.state.serie_accs;
-          for(let i = (aux.ax.length - 1); i > 0; i--){
-            aux.ax[i] = parseFloat(aux.ax[i - 1]).toFixed(2);
-          }
-          aux.ax[0] = parseFloat(this.state.ax).toFixed(2);
 
-          for(let i = (aux.ay.length - 1); i > 0; i--){
-            aux.ay[i] = parseFloat(aux.ay[i - 1]).toFixed(2);
-          }
-          aux.ay[0] = parseFloat(this.state.ay).toFixed(2);
 
-          for(let i = (aux.az.length - 1); i > 0; i--){
-            aux.az[i] = parseFloat(aux.az[i - 1]).toFixed(2);
-          }
-          aux.az[0] = parseFloat(this.state.az).toFixed(2);
-
-          this.setState({serie_accs: aux});
-
+      if(this.state.navdata.altitude !== message.altd){
+        this.setState(prevState => ({
+            navdata:{
+              ...prevState.navdata,
+              ["altitude"]: message.altd/1000.0 //Altitude mm to m
+            }
+        }));
       }
+
+      if(this.state.navdata.pressure !== message.pressure){
+        this.setState(prevState => ({
+            navdata:{
+              ...prevState.navdata,
+              ["pressure"]: message.pressure
+            }
+        }));
+      }
+
+      if(this.state.navdata.battery !== message.batteryPercent){
+        this.setState(prevState => ({
+            navdata:{
+              ...prevState.navdata,
+              ["battery"]: message.batteryPercent
+            }
+        }));
+      }
+
+      if(this.state.navdata.motor1 !== message.motor1){
+        this.setState(prevState => ({
+            navdata:{
+              ...prevState.navdata,
+              ["motor1"]: message.motor1
+            }
+        }));
+      }
+
+      if(this.state.navdata.motor2 !== message.motor2){
+        this.setState(prevState => ({
+            navdata:{
+              ...prevState.navdata,
+              ["motor2"]: message.motor2
+            }
+        }));
+      }
+
+      if(this.state.navdata.motor3 !== message.motor3){
+        this.setState(prevState => ({
+            navdata:{
+              ...prevState.navdata,
+              ["motor3"]: message.motor3
+            }
+        }));
+      }
+      if(this.state.navdata.motor4 !== message.motor4){
+        this.setState(prevState => ({
+            navdata:{
+              ...prevState.navdata,
+              ["motor4"]: message.motor4
+            }
+        }));
+      }
+    
+      // if(this.state.navdata.altitude !== message.altd) this.setState({mavdata.altitude: message.altd});
+      // if(this.state.pressure !== message.pressure) this.setState({pressure: message.pressure});
+      // if(this.state.altitude !== message.batteryPercent) this.setState({baterry: message.batteryPercent});
+      // if(this.state.ax !== message.ax){
+      //     this.setState({ax: message.ax});
+      //     this.setState({ay: message.ay});
+      //     this.setState({az: message.az});
+      //     let aux = this.state.serie_accs;
+      //     for(let i = (aux.ax.length - 1); i > 0; i--){
+      //       aux.ax[i] = parseFloat(aux.ax[i - 1]).toFixed(2);
+      //     }
+      //     aux.ax[0] = parseFloat(this.state.ax).toFixed(2);
+
+      //     for(let i = (aux.ay.length - 1); i > 0; i--){
+      //       aux.ay[i] = parseFloat(aux.ay[i - 1]).toFixed(2);
+      //     }
+      //     aux.ay[0] = parseFloat(this.state.ay).toFixed(2);
+
+      //     for(let i = (aux.az.length - 1); i > 0; i--){
+      //       aux.az[i] = parseFloat(aux.az[i - 1]).toFixed(2);
+      //     }
+      //     aux.az[0] = parseFloat(this.state.az).toFixed(2);
+
+      //     this.setState({serie_accs: aux});
+
+      // }
 
       // console.log(this.state.pressure);
       // this.setNavdata({ax: message.ax});
@@ -174,18 +247,29 @@ class App extends Component{
 
   render(){
 
-    if(this.state.connected){
+    if(this.state.connected || false){
       return(
         <div className="wrapper f-col">
-            <Header/>
+          <BrowserRouter>
             <NavbarLeft/>
-            <Geral 
-              altitude={this.state.altitude} 
-              pressure={this.state.pressure} 
-              baterry={this.state.baterry}
-              serie_accs={this.state.serie_accs}
+            {/* <Header/> */}
+            <Redirect to="/geral" />
+            <Route path="/geral" exact>
+             
+              <Geral 
+                // altitude={this.state.altitude} 
+                // pressure={this.state.pressure} 
+                // baterry={this.state.baterry}
+                // serie_accs={this.state.serie_accs}
+                 
+                  navdata={this.state.navdata}
+                  gps={this.state.gps}
+              
+              />
+
+            </Route>
             
-            />
+          </BrowserRouter>
         </div> 
       );
     }else{
