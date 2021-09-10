@@ -105,7 +105,7 @@ class Geral extends React.Component{
                                 </div>
                                 
                                 <div className="box-speed  box-s">
-                                    <ReviewsBar score="60" color="white" label="SPEED" unit="M/S"/>
+                                    <ReviewsBar score="100" color="white" max={100} label="SPEED" unit="M/S"/>
 
                                 </div>
                             </div>
@@ -117,16 +117,16 @@ class Geral extends React.Component{
                                 
                                 
                                     <div className="box-item">
-                                        <ReviewsBar score="40" color="red" unit="RPM" label="MOTOR 1"/>
+                                        <ReviewsBar score="40" color="red" unit="RPM" max={500} label="MOTOR 1"/>
                                     </div>
                                     <div className="box-item">
-                                        <ReviewsBar score="60" color="#A30CFF" unit="RPM" label="MOTOR 2"/>
+                                        <ReviewsBar score="60" color="#A30CFF" unit="RPM" max={500} label="MOTOR 2"/>
                                     </div>
                                     <div className="box-item">
-                                        <ReviewsBar score="23" color="#FF6D1B" unit="RPM" label="MOTOR 3"/>
+                                        <ReviewsBar score="23" color="#FF6D1B" unit="RPM" max={500} label="MOTOR 3"/>
                                     </div>
                                     <div className="box-item">
-                                        <ReviewsBar score="25" color="rgb(115,211,19)" unit="RPM" label="MOTOR 4"/>
+                                        <ReviewsBar score="25" color="rgb(115,211,19)" max={500} unit="RPM" label="MOTOR 4"/>
                                     </div>
                                 </div>
                                

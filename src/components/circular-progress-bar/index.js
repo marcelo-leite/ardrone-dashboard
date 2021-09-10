@@ -26,7 +26,7 @@ function sizeNumber(size){
   return size*6;
 }
 
-const ReviewsBar = ({score, unit, color, label}) => {
+const ReviewsBar = ({score, unit, color, label, max}) => {
 
   // const { score } = props;
   // const { unit } = props;
@@ -63,6 +63,7 @@ const ReviewsBar = ({score, unit, color, label}) => {
               
             }}
             strokeWidth={6}
+            maxValue={max}
           >
               <div className="f-col f-c" >
                   <div className="f-row f-c">
