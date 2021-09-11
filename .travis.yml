@@ -1,11 +1,7 @@
 language: node_js
 node_js:
   - "v14.16.1"
-nvm:
-  - "0.38.0"
-npm:
-  - "6.14.12"
 script:
-  - CI='' npm run build
+  - "CI='' npm run build"
 on:
   branch: master
