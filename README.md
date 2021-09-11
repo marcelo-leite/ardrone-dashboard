@@ -79,20 +79,14 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
+- [ReactJs](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Roslib](http://wiki.ros.org/roslibjs) - The Standard ROS JavaScript Library
+- [Google Maps API](https://github.com/tomchentw/react-google-maps) -  React.js Google Maps integration component 
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+## ✍️ Author <a name = "author"></a>
 
-## ✍️ Authors <a name = "authors"></a>
+- [@Marcelo Leite](https://github.com/marcelo-leite) - Electrical Engineering Student
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+## 👨‍🏫 Mentor <a name = "mentor"></a>
+- [@Selmo Eduardo](https://github.com/selmoeduardo) - MSc Electrical Engineering
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
