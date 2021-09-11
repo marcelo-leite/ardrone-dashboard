@@ -6,6 +6,6 @@ nvm:
 npm:
   - "6.14.12"
 script:
-  - npm run build
+  - CI='' npm run build
 on:
   branch: master
