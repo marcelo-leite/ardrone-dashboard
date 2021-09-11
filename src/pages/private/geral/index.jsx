@@ -105,7 +105,7 @@ class Geral extends React.Component{
                                 </div>
                                 
                                 <div className="box-speed  box-s">
-                                    <ReviewsBar score="100" color="white" max={100} label="SPEED" unit="M/S"/>
+                                    <ReviewsBar score="2" color="white" max={100} label="SPEED" unit="M/S"/>
 
                                 </div>
                             </div>

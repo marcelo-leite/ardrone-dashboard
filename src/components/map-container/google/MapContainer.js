@@ -339,10 +339,10 @@ MapBox.defaultProps = {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#000000"
+                "color": "#1d0746"
             },
             {
-                "lightness": 17
+                "lightness": 0
             }
         ]
     },
