@@ -8,7 +8,7 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![Build]](https://app.travis-ci.com/marcelo-leite/ardrone-dashboard.svg?token=MzKzb3TCrpF4775Gq1xV&branch=master)
+[![Build](https://app.travis-ci.com/marcelo-leite/ardrone-dashboard.svg?token=MzKzb3TCrpF4775Gq1xV&branch=master)](https://app.travis-ci.com/marcelo-leite/ardrone-dashboard.svg?token=MzKzb3TCrpF4775Gq1xV&branch=master)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
