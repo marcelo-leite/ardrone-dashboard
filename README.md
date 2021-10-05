@@ -53,11 +53,16 @@ Give examples
 A step by step series of examples that tell you how to get a development env running.
 
 Say what the step will be
-
 ```
-Give the example
+git clone https://github.com/marcelo-leite/ardrone-dashboard
 ```
-
+```
+cd ardrone-dashboard
+npm install
+```
+```
+npm start
+```
 And repeat
 
 ```
@@ -73,10 +78,6 @@ Add notes about how to use the system.
 ```
 roslaunch rosbridge_server rosbridge_websocket.launch 
 ```
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [ReactJs](https://reactjs.org/) - A JavaScript library for building user interfaces
