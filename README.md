@@ -20,7 +20,7 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
+## 📝 Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
@@ -84,10 +84,10 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 - [Roslib](http://wiki.ros.org/roslibjs) - The Standard ROS JavaScript Library
 - [Google Maps API](https://github.com/tomchentw/react-google-maps) -  React.js Google Maps integration component 
 
-## ✍️ Author <a name = "author"></a>
+## Author <a name = "author"></a>
 
 - [@Marcelo Leite](https://github.com/marcelo-leite) - Electrical Engineering Student
 
-## 👨‍🏫 Mentor <a name = "mentor"></a>
+## Mentor <a name = "mentor"></a>
 - [@Selmo Eduardo](https://github.com/selmoeduardo) - MSc Electrical Engineering
 
