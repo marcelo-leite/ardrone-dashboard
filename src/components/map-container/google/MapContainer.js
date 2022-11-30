@@ -81,10 +81,10 @@ MapBox.defaultProps = {
                 "visibility": "on"
             },
             {
-                "color": "#4f54790"
+                "color": "#874590"
             },
             {
-                "lightness": 0
+                "lightness": -50
             }
         ]
     },

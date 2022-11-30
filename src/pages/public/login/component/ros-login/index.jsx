@@ -1,6 +1,6 @@
 
 import React, {Component} from "react";
-import { RosLoginStyled } from "./styled.jsx";
+import { RosLoginStyled } from "./styled";
 
 
 class RosLogin extends Component {
@@ -24,3 +24,4 @@ class RosLogin extends Component {
 }
 
 export default RosLogin;
+
